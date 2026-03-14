@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  CupcakeWorld
 //
 //  Created by Rodrigo Lima on 13/03/26.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -15,10 +15,9 @@ struct ContentView: View {
                 .foregroundStyle(.tint)
             Text("Hello, world!")
         }
-        .padding()
-    }
+        .padding()    }
 }
 
 #Preview {
-    ContentView()
+    HomeView()
 }
