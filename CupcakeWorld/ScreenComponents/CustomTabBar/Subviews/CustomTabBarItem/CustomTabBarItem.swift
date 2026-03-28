@@ -34,9 +34,3 @@ struct CustomTabBarItem: View {
         }
     }
 }
-
-#Preview {
-    @State var selectedTab: TabBar = .home
-    return CustomTabBarItem(selectedTab: $selectedTab, tabItem: .settings)
-        .accentColor(.primary)
-}

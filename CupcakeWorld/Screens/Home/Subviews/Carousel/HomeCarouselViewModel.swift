@@ -1,5 +1,5 @@
 //
-//  CarouselViewModel.swift
+//  HomeCarouselViewModel.swift
 //  CupcakeWorld
 //
 //  Created by Rodrigo Lima on 15/03/26.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class CarouselViewModel: ObservableObject {
+class HomeCarouselViewModel: ObservableObject {
     
     @Published var displayBanners: [UIImage] = []
     @Published var currentIndex: Int = 1

@@ -1,5 +1,5 @@
 //
-//  CarouselView.swift
+//  HomeCarouselView.swift
 //  CupcakeWorld
 //
 //  Created by Rodrigo Lima on 14/03/26.
@@ -7,9 +7,8 @@
 
 import SwiftUI
 
-struct CarouselView: View {
-    
-    @StateObject private var viewModel = CarouselViewModel()
+struct HomeCarouselView: View {
+    @StateObject private var viewModel = HomeCarouselViewModel()
     
     var body: some View {
         VStack {
@@ -20,7 +19,6 @@ struct CarouselView: View {
                             .resizable()
                             .scaledToFit()
                             .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .frame(maxWidth: 300, maxHeight: 200)
                             .tag(index)
                             .onTapGesture {
                                 viewModel.bannerTapped()
@@ -32,6 +30,7 @@ struct CarouselView: View {
                     viewModel.handleIndexChange(newIndex)
                 }
                 .navigationDestination(isPresented: $viewModel.navigateToDetails) {
+                    //TODO - develop the view for promotions
                     Text("Promotion Details Screen to be implemented.")
                 }
             }
@@ -46,5 +45,5 @@ struct CarouselView: View {
 }
 
 #Preview {
-    CarouselView()
+    HomeCarouselView()
 }

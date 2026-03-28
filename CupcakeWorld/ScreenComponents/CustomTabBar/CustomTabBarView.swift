@@ -11,6 +11,7 @@ struct CustomTabBarView: View {
     @Environment(\.colorScheme) var colorScheme
     @State private var selectedTab: TabBar = .home
     @Namespace private var animation
+    @StateObject private var tabBarManager = TabBarManager()
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -25,8 +26,12 @@ struct CustomTabBarView: View {
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .environmentObject(tabBarManager)
             
             customTabBar()
+                .offset(y: tabBarManager.isHidden ? 150 : 0)
+                .opacity(tabBarManager.isHidden ? 0 : 1)
+                .animation(.spring(response: 0.4, dampingFraction: 0.8), value: tabBarManager.isHidden)
                 .edgesIgnoringSafeArea(.bottom)
         }
         .ignoresSafeArea(.keyboard)
