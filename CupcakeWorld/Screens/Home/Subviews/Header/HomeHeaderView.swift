@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct HomeHeaderView: View {
-    @StateObject private var user: User = Mock().user
+//    @StateObject private var user: User = Mock().user
+    @EnvironmentObject var user: User
     @State private var showAddressesSheet: Bool = false
     
     var body: some View {
@@ -48,4 +49,5 @@ struct HomeHeaderView: View {
 
 #Preview {
     HomeHeaderView()
+        .environmentObject(Mock().user)
 }

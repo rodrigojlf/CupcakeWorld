@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    
     @State private var presentCreateYourOwn: Bool = false
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -34,4 +36,5 @@ struct HomeView: View {
 
 #Preview {
     HomeView()
+        .environmentObject(Mock().user)
 }

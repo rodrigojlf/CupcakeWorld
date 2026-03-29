@@ -14,12 +14,7 @@ struct CreateYourCupcakeView: View {
         //TODO - develop the view
         VStack {
             HStack(alignment: .center) {
-                Button {
-                    dismiss()
-                } label: {
-                    Image(systemName: "chevron.left")
-                    Text("Back")
-                }
+                CustomBackButton { dismiss() }
                 Spacer()
             }
             .padding()

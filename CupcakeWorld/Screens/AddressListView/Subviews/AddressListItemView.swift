@@ -27,7 +27,7 @@ struct AddressListItemView: View {
                 if let name = address.name, !name.isEmpty {
                     Text(name)
                         .font(.headline)
-                        .foregroundColor(.primary)
+                        .foregroundStyle(.primary)
                 }
                 
                 Text(address.wrappedAddressShort)
@@ -41,9 +41,9 @@ struct AddressListItemView: View {
             Spacer()
         }
         .padding()
-        .background(Color.white)
+        .background(.thinMaterial)
         .cornerRadius(12)
-        .shadow(color: .black.opacity(0.08), radius: 5, x: 0, y: 2)
+        .shadow(color: .primary.opacity(0.1), radius: 5, x: 0, y: 2)
     }
 }
 

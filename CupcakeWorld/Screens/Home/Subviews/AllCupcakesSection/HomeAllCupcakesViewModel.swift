@@ -22,7 +22,7 @@ final class HomeAllCupcakesViewModel: ObservableObject {
         var result = allCupcakes
         
         if selectedFilter != .all {
-            result = result.filter { $0.category == selectedFilter.rawValue }
+            result = result.filter { $0.categories.contains(selectedFilter.rawValue.lowercased())/* == selectedFilter.rawValue*/ }
         }
         
         switch selectedSort {

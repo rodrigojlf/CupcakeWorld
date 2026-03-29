@@ -8,9 +8,11 @@
 import Foundation
 
 struct Cupcake: Identifiable {
-    let id = UUID()
+    let id: UUID = UUID()
     let name: String
     let price: Double
     let imageUrl: String
-    let category: String
+    let categories: Array<String> // ["premium", "party", "vegan"]
+    let details: String
+    let tags: Array<String> // ["bestSeller", "recomended", "discount"]
 }
